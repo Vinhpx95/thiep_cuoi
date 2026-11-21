@@ -97,7 +97,7 @@ function openCard(){if(opening)return;opening=true;const o=$("#opener");playMusi
   setTimeout(()=>{document.body.classList.remove("locked");o.classList.add("gone");setTimeout(()=>o.style.display="none",700);},2250);
   setTimeout(startPetals,3200);}
 /* Tung hoa: cánh hoa bung mạnh từ giữa thiệp ra khắp màn hình */
-function tossFlowers(){const n=matchMedia("(prefers-reduced-motion: reduce)").matches?24:70,cx=innerWidth/2,cy=innerHeight/2,R=Math.hypot(innerWidth,innerHeight)*.75;
+function tossFlowers(){const n=matchMedia("(prefers-reduced-motion: reduce)").matches?50:150,cx=innerWidth/2,cy=innerHeight/2,R=Math.hypot(innerWidth,innerHeight)*.75;
   const box=document.createElement("div");box.style.cssText="position:fixed;inset:0;pointer-events:none;z-index:120;overflow:hidden";document.body.appendChild(box);
   for(let i=0;i<n;i++){const p=document.createElement("i");p.className="petal";const sc=.9+Math.random()*1.6;
     p.style.cssText=`position:absolute;left:${cx}px;top:${cy}px;width:${16*sc}px;height:${18*sc}px;margin:${-9*sc}px 0 0 ${-8*sc}px;background-image:url("${GEMS[i%GEMS.length]}")`;
