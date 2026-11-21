@@ -113,7 +113,7 @@ img{max-width:100%;display:block}
 .photo>div{position:relative}
 .photo .mono{font-family:var(--script);font-size:clamp(56px,8vw,90px);line-height:1}
 .photo .hint{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:8px}
-.badge{position:absolute;top:-22px;right:-22px;width:64px;height:64px;font-size:30px}
+.badge{position:absolute;top:-22px;left:-22px;width:64px;height:64px;font-size:30px}
 .hero .caption{position:absolute;bottom:-40px;right:0;font-family:var(--display);font-style:italic;color:var(--primary);font-size:14px}
 .scroll-cue{position:absolute;bottom:24px;left:50%;translate:-50%;width:24px;height:38px;border:1.5px solid var(--muted);border-radius:12px;opacity:.6}
 .scroll-cue::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:8px;margin-left:-1.5px;border-radius:2px;background:var(--muted);animation:cue 1.6s infinite}
@@ -254,7 +254,7 @@ section.sec{padding:110px 0;position:relative}
     section.sec{padding:80px 0}
   .rsvp{padding:28px 22px}
   .cd{gap:10px}.cd div{width:72px}.cd b{font-size:30px}.cd span{letter-spacing:.12em}.scroll-cue{display:none}
-  .badge{right:-8px;top:-26px}
+  .badge{left:-8px;top:-26px}
 }
 
 /* ===== Groom edition additions ===== */
