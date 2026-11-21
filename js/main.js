@@ -94,19 +94,19 @@ function openCard(){if(opening)return;opening=true;const o=$("#opener");playMusi
   o.classList.add("opened");
   setTimeout(()=>{o.classList.add("stage2");burst(14)},450);
   setTimeout(()=>{tossFlowers();},2000);
-  setTimeout(()=>{document.body.classList.remove("locked");o.classList.add("gone");setTimeout(()=>o.style.display="none",700);},2250);
-  setTimeout(startPetals,3200);}
+  setTimeout(()=>{document.body.classList.remove("locked");o.classList.add("gone");setTimeout(()=>o.style.display="none",900);},2400);
+  setTimeout(startPetals,4000);}
 /* Tung hoa: cánh hoa bung mạnh từ giữa thiệp ra khắp màn hình */
 function tossFlowers(){const n=matchMedia("(prefers-reduced-motion: reduce)").matches?50:150,cx=innerWidth/2,cy=innerHeight/2,R=Math.hypot(innerWidth,innerHeight)*.75;
   const box=document.createElement("div");box.style.cssText="position:fixed;inset:0;pointer-events:none;z-index:120;overflow:hidden";document.body.appendChild(box);
   for(let i=0;i<n;i++){const p=document.createElement("i");p.className="petal";const sc=.9+Math.random()*1.6;
     p.style.cssText=`position:absolute;left:${cx}px;top:${cy}px;width:${16*sc}px;height:${18*sc}px;margin:${-9*sc}px 0 0 ${-8*sc}px;background-image:url("${GEMS[i%GEMS.length]}")`;
     box.appendChild(p);
-    const a=Math.random()*Math.PI*2,r=R*(.45+Math.random()*.7),dx=Math.cos(a)*r,dy=Math.sin(a)*r,rot=(Math.random()*2-1)*720,d=1500+Math.random()*900,dl=Math.random()*180;
+    const a=Math.random()*Math.PI*2,r=R*(.45+Math.random()*.7),dx=Math.cos(a)*r,dy=Math.sin(a)*r,rot=(Math.random()*2-1)*720,d=2400+Math.random()*1200,dl=Math.random()*250;
     p.animate([{transform:"translate3d(0,0,0) rotate(0deg) scale(.3)",opacity:0},{offset:.12,opacity:1},
       {transform:`translate3d(${dx*.75}px,${dy*.75}px,0) rotate(${rot*.7}deg) scale(1)`,opacity:1,offset:.6},
       {transform:`translate3d(${dx}px,${dy+120}px,0) rotate(${rot}deg) scale(.9)`,opacity:0}],{duration:d,delay:dl,easing:"cubic-bezier(.15,.7,.35,1)",fill:"forwards"});}
-  setTimeout(()=>box.remove(),3300)}
+  setTimeout(()=>box.remove(),4200)}
 $("#env").onclick=openCard;
 function burst(n){for(let i=0;i<n;i++){const p=document.createElement("i");p.className="petal";p.style.backgroundImage=`url("${GEMS[i%GEMS.length]}")`;
   const sc=.7+Math.random()*.8;p.style.width=16*sc+"px";p.style.height=18*sc+"px";p.style.left="50vw";p.style.top="45vh";p.style.zIndex=101;p.style.position="fixed";
