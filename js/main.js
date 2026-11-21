@@ -93,8 +93,7 @@ let opening=false;
 function openCard(){if(opening)return;opening=true;const o=$("#opener");playMusic();
   o.classList.add("opened");
   setTimeout(()=>{o.classList.add("stage2");burst(14)},450);
-  setTimeout(()=>o.classList.add("stage4"),2300);
-  setTimeout(()=>{o.classList.add("gone");setTimeout(()=>o.style.display="none",950);document.body.classList.remove("locked");startPetals()},2900);}
+  setTimeout(()=>{document.body.classList.remove("locked");o.classList.add("stage4","gone");setTimeout(()=>o.style.display="none",1150);startPetals()},2400);}
 $("#env").onclick=openCard;
 function burst(n){for(let i=0;i<n;i++){const p=document.createElement("i");p.className="petal";p.style.backgroundImage=`url("${GEMS[i%GEMS.length]}")`;
   const sc=.7+Math.random()*.8;p.style.width=16*sc+"px";p.style.height=18*sc+"px";p.style.left="50vw";p.style.top="45vh";p.style.zIndex=101;p.style.position="fixed";
