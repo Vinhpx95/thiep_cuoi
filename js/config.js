@@ -8,7 +8,7 @@ window.CONFIG = {
   weddingISO: "2026-12-27T11:00:00+07:00",   // ngày giờ Lễ Thành Hôn (dùng cho đếm ngược)
   weekday: "Chủ nhật", city: "Hà Nội", rsvpBy: "20.12.2026",
 
-  brideFather: "Tạ Minh Tiến", brideMother: "Phí Thị Tuyến", brideAddr: "Ngọc Liệp, Xã Kiều Phú, Tp. Hà Nội",
+  brideFather: "Tạ Minh Tiến", brideMother: "Phí Thị Tuyến", brideAddr: "Ngọc Bài, Xã Kiều Phú, Tp. Hà Nội",
   groomFather: "Phạm Văn Quyết", groomMother: "Đỗ Thị Châm", groomAddr: "Tân Thịnh, TT. Kép, Tỉnh Bắc Ninh", groomMap: "https://goo.gl/maps/1FDgqYHNHwwGNDHS8",
 
   brideBio: "Một cô gái dịu dàng, yêu những điều giản dị và luôn tin rằng hạnh phúc là được cùng nhau trưởng thành mỗi ngày.",
